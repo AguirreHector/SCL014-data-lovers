@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 110px;
+    background-image: url(img/pokebolas-reales-pokemon.jpg);
+    background-position: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logopokemon{
+    width: 95%;
+    height: 95%;
+    background-image: url(img/logopokemon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.desarrollo{
+    display: flex;
+    flex-direction: row;
+}
+
+.lateral {
+    background-color: #60C264;
+    width: 30%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.muestra {
+    width: 70%;
+    height: 600px;
+    background-image: url(img/bosquepokemon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contenedorlateral {
+    width: 85%;
+    margin-top: 35px;
+}
+
+.inputs {
+    width: 100%;
+    border-radius: 4px;
+    height: 25px;
+    border: solid .05px #777;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 0;
+}
+
+input:first-child {
+    margin-bottom: 30px;
+    display: inline-block;
+    font: 10.5px Arial;
+}
+
+label:first-child {
+    margin: 0 0 8px 0;
+}
+
+.checkbox {
+    margin: 0 3px;
+}
+
+.contieneinputslateral{
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 0.8em;
+}
+
+.evolucion {
+    display: flex;
+    flex-direction: column;
+}
+
+.contienesino{
+    display: flex;
+    vertical-align: bottom;
+}
+

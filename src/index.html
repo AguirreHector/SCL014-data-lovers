@@ -3,10 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <section class="header">
+        <div class="logopokemon"></div>
+        <div class="fondoheader"></div>
+      </section>
+      <section class="desarrollo">
+        <div class="lateral">
+          <div class="contenedorlateral">
+            <div class="contieneinputslateral">
+              <input type="text" placeholder="Nombre de pokemon" class="inputs"><br><br>
+              <div class="evolucion">
+                <label for="evolucion">Evolución:</label>
+                <div class="contienesino">
+                  <label class="labels">Sí</label>
+                  <input type="checkbox" class="checkbox">
+                  <label class="labels">No</label>
+                  <input type="checkbox" class="checkbox">
+                </div>
+              </div>
+            </div>
+            <div class="contieneinputslateral2">
+              <label for="tipo" class="tipo">Tipo:</label>
+              <input type="text" id="tipo" class="inputs" name="tipo"><br><br>
+              <label for="fortaleza">Fortaleza:</label>
+              <input type="text" id="fortaleza" class="inputs" name="fortaleza"><br><br>
+              <label for="debilidad">Debilidad:</label>
+              <input type="text" id="debilidad" class="inputs"name="debilidad"><br><br>
+            </div>
+          </div>
+        </div>
+        <div type="module" class="muestra" id="muestra">
+          
+        </div>
+      </section>
+      
+    </div>
+    <script src="data.js" type="module"></script>
     <script src="main.js" type="module"></script>
   </body>
-</html>
+  </html>
