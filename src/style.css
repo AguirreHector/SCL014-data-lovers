@@ -24,23 +24,25 @@ body {
 .desarrollo{
     display: flex;
     flex-direction: row;
+    background: url(img/bosquepokemon.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .lateral {
     background-color: #60C264;
     width: 30%;
-    height: 600px;
     display: flex;
     justify-content: center;
 }
 
+.contenedorlateral{
+    }
+
 .contenedorTarjetas {
     width: 70%;
-    height: 600px;
-    background-image: url(img/bosquepokemon.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
