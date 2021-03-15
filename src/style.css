@@ -34,13 +34,16 @@ body {
     justify-content: center;
 }
 
-.muestra {
+.contenedorTarjetas {
     width: 70%;
     height: 600px;
     background-image: url(img/bosquepokemon.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .contenedorlateral {
@@ -90,3 +93,36 @@ label {
     vertical-align: bottom;
 }
 
+.tarjetaPokemon {
+    background: rgb(193, 186, 186, 0.6);
+    margin: 12px 10px 0;
+    height: 300px;
+    width: 220px;
+    border-radius: 13px;
+}
+
+.internoTarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.internoTarjeta img {
+    margin-top: 12px;
+    width: 120px;
+    height: 120px;
+}
+
+.tarjetaPokemon li{
+    list-style: none;
+    font-size: 11px;
+    padding: 2px 0;
+}
+
+.infoPokemon {
+    padding: 0 8px;
+}
+
+h2 {
+    font-size: 21.5px;
+}
