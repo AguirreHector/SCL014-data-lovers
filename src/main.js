@@ -1,34 +1,21 @@
-// import { example } from './data.js';
-// import data from './data/atletas/atletas.js';
-
 import DATOS from './data/pokemon/pokemon.js';
+import { mostrarTodosLosPokemon, } from './data.js';
 
 console.log(DATOS);
-// Función que muestra los personajes en Html
 
+const todosLosPokemon = DATOS.pokemon;
+
+// muestra pokemons que cumplen con las condiciones establecidas de búsqueda.
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
+contenedorTarjetas.innerHTML = mostrarTodosLosPokemon(todosLosPokemon)
 
-// muestra.innerHTML = mostrarTodosLosPokemon(DATOS)
 
-const mostrarTodosLosPokemon = (data) => {
-    let plantillaPokemon = ''
-    data.pokemon.map((obj) => {
-        plantillaPokemon += `
-            <div class="tarjetaPokemon">
-                <div class="internoTarjeta">
-                    <img src='${obj.img}' alt = "Image" class="imagenPokemon"/>
-                    <h2 class="nombrePokemon">${obj.name.toUpperCase()}</h2>
-                </div>
-                <div class="infoPokemon">
-                    <li><b>TYPE:</b> ${obj.type.map(item => " "+item.toUpperCase())}</li>
-                    <li><b>RESISTANT:</b> ${obj.resistant.map(item => " "+item.toUpperCase())}</li>
-                    <li><b>WEAKNESSES:</b> ${obj.weaknesses.map(item => " "+item.toUpperCase())}</li>
-                </div>
-            </div>
-            `;
-    });
-    return plantillaPokemon;
+//filtra por nombre.
+document.querySelector('#inputNombre').addEventListener('keyup', buscadorPokemon);
 
-  };
+function buscadorPokemon() {
+    const buscaPokemons = document.getElementById('inputNombre').value.toLowerCase();
+    const buscaPokemon = todosLosPokemon.filter(pokemon => pokemon.name.includes(buscaPokemons));
+    contenedorTarjetas.innerHTML = mostrarTodosLosPokemon(buscaPokemon);
+}
 
-contenedorTarjetas.innerHTML = mostrarTodosLosPokemon(DATOS)
