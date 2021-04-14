@@ -17,9 +17,9 @@ const todosLosPokemon = DATOS.pokemon;
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
 
 
-export let mostrarTodosLosPokemon = (data) => {
+export let mostrarTodosLosPokemon = (cambiante) => {
     let plantillaPokemon = ''
-    data.map((obj) => {
+    cambiante.map((obj) => {
         plantillaPokemon += `
         <div class="tarjetaPokemon">
                 <div class="internoTarjeta">
@@ -34,19 +34,19 @@ export let mostrarTodosLosPokemon = (data) => {
             </div>
             `;
         });
-//        console.log(data);             //IMPORTANTE para mostrar en consola que es lo que se está mostrando.
+    //   console.log(cambiante);             //IMPORTANTE para mostrar en consola que es lo que se está mostrando.
         return plantillaPokemon;
     }
 
-contenedorTarjetas.innerHTML = mostrarTodosLosPokemon(todosLosPokemon)
+// contenedorTarjetas.innerHTML = mostrarTodosLosPokemon(todosLosPokemon)
 
 //filtra por NOMBRE.
 export function buscadorPokemon(cambiante) {
-    const buscaPokemons = document.getElementById('inputNombre').value.toLowerCase();
-    if(buscaPokemons===''){
+    const tomaPokemons = document.getElementById('inputNombre').value.toLowerCase();
+    if(tomaPokemons===''){
         contenedorTarjetas.innerHTML = mostrarTodosLosPokemon(cambiante);
     } else {
-        const buscaPokemon = cambiante.filter(pokemon => pokemon.name.includes(buscaPokemons));
+        const buscaPokemon = cambiante.filter(pokemon => pokemon.name.includes(tomaPokemons));
     cambiante = buscaPokemon;
     contenedorTarjetas.innerHTML = mostrarTodosLosPokemon(buscaPokemon);
     }
