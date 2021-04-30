@@ -4,16 +4,19 @@ body {
 }
 
 .header {
-    width: 100%;
-    height: 110px;
+    max-width: 100%;
+    height: 6rem;
     background-image: url(img/pokebolas-reales-pokemon.jpg);
-    background-position: 0px;
+    background-position: 0em;
+    /* background-attachment: fixed; */
     background-size: cover;
     background-repeat: no-repeat;
+    position: sticky;
+    top: 0;
 }
 
 .logopokemon{
-    width: 95%;
+    width: 100%;
     height: 95%;
     background-image: url(img/logopokemon.png);
     background-size: contain;
@@ -33,21 +36,24 @@ body {
 
 .lateral {
     background-color: #60C264;
-    width: 30%;
+    width: 220px;
     display: flex;
     justify-content: center;
 }
 
 .contenedorTarjetas {
-    width: 70%;
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
+ }
 
 .contenedorlateral {
     width: 85%;
     margin-top: 35px;
+    height: 65vh;
+    position: sticky;
+    top: 21vh;
 }
 
 .inputs {
@@ -57,13 +63,13 @@ body {
     border: solid .05px #777;
     margin: 0 auto;
     box-sizing: content-box;
-    padding: 0;
+    padding: 2px;
 }
 
 input:first-child {
     margin-bottom: 30px;
     display: inline-block;
-    font: 10.5px Arial;
+    font: 13.5px Arial;
 }
 
 label:first-child {
@@ -95,8 +101,8 @@ label {
 .tarjetaPokemon {
     background: rgb(193, 186, 186, 0.6);
     margin: 12px 10px 0;
-    height: 300px;
-    width: 220px;
+    height: 260px;
+    width: 180px;
     border-radius: 13px;
 }
 
@@ -107,14 +113,14 @@ label {
     align-items: center;
 }
 .internoTarjeta img {
-    margin-top: 12px;
-    width: 120px;
-    height: 120px;
+    margin-top: 11px;
+    width: 100px;
+    height: 100px;
 }
 
 .tarjetaPokemon li{
     list-style: none;
-    font-size: 11px;
+    font-size: 9px;
     padding: 2px 0;
 }
 
@@ -123,5 +129,71 @@ label {
 }
 
 h2 {
-    font-size: 21.5px;
+    font-size: 17.5px;
+}
+
+
+@media (max-width: 840px) {
+
+    .header{
+        height: 4rem;
+    }
+
+    .lateral {
+        width: 160px;
+    }
+
+    .inputs {
+        height: 15px;
+        padding: 1.5px;
+    }
+
+    input:first-child {
+        margin-bottom: 20px;
+        font: 8.5px Arial;
+    }
+
+    label:first-child {
+        margin: 0 0 5px 0;
+    }
+
+    .contenedorlateral{
+       top: 15.5vh;
+    }
+
+    .contieneinputslateral{
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 0.6em;
+    }
+
+    .tarjetaPokemon {
+        height: 220px;
+        width: 153px;
+        border-radius: 10px;
+    }
+
+    .internoTarjeta img {
+        margin-top: 9.5px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .tarjetaPokemon li{
+        list-style: none;
+        font-size: 8px;
+        padding: 1.5px 0;
+    }
+
+    .infoPokemon {
+        padding: 0 6px;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
 }

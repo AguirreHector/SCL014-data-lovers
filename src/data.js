@@ -11,7 +11,7 @@ import DATOS from './data/pokemon/pokemon.js';
 
 // muestra pokemons que cumplen con las condiciones establecidas de búsqueda.
 
-console.log(DATOS);
+//console.log(DATOS);
 
 const todosLosPokemon = DATOS.pokemon;
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
